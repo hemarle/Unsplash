@@ -86,7 +86,6 @@
 @media screen and (max-width: 500px) {
   .content {
     overflow: hidden;
-    background-color: yellow;
   }
   .content__gallery {
     width: 100%;
