@@ -1,0 +1,111 @@
+/* .content {
+  width: 1220px;
+  margin: 20px auto;
+  columns: 4;
+  column-gap: 40px;
+}
+
+.content .content__box {
+  width: 100%;
+  height: 200%;
+  margin: 0 0 20px;
+  padding: 10px;
+
+  overflow: hidden;
+}
+.content__box img {
+  width: 100%;
+} */
+/* .content > img:nth-of-type(even) {
+  width: 250px;
+  height: auto;
+} */
+.content {
+  position: relative;
+  /* height: 100vh; */
+  width: 100%;
+}
+.content__gallery {
+  position: relative;
+  height: auto;
+  width: 80%;
+  margin: auto;
+  padding: 45px 0;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  grid-gap: 2vmin;
+  grid-auto-flow: dense;
+}
+.content__box {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.content__box:first-child {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.content__box:nth-child(2n + 3) {
+  /* grid-column-start: span 2; */
+  grid-row-start: span 2;
+}
+.content__box:nth-child(4n + 5) {
+  grid-column-start: span 2;
+  grid-row-start: span 2;
+}
+.content__box > img {
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+}
+.content__box p {
+  visibility: hidden;
+  position: relative;
+  font-weight: 900;
+  font-size: 30px;
+  color: rgb(233, 233, 241);
+  bottom: 60px;
+  text-align: center;
+  left: 10px;
+}
+.content__box:hover p {
+  visibility: visible;
+}
+.content__box button {
+  visibility: hidden;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.content__box:hover button {
+  visibility: visible;
+}
+
+@media screen and (max-width: 500px) {
+  .content {
+    overflow: hidden;
+    background-color: yellow;
+  }
+  .content__gallery {
+    width: 100%;
+
+    grid-template-columns: auto;
+    margin: 0;
+
+    padding: 0;
+  }
+  .content__box:first-child {
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+  }
+  .content__box:nth-child(2n + 3) {
+    /* grid-column-start: span 2; */
+    grid-row-start: span 1;
+  }
+  .content__box:nth-child(4n + 5) {
+    grid-column-start: span 1;
+    grid-row-start: span 1;
+  }
+}

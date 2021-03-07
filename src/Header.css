@@ -1,0 +1,106 @@
+.header {
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 800;
+}
+
+.header__text > h3 {
+  font-size: 18px;
+  margin: 0;
+}
+.header__text > h6 {
+  font-size: 14px;
+  margin: 0;
+}
+.header__left {
+  flex: 0.2;
+  display: flex;
+  align-items: center;
+}
+.header__left > .MuiSvgIcon-root {
+  margin-right: 10px;
+  font-size: 48px;
+}
+.header__center {
+  flex: 0.6;
+  display: flex;
+  align-items: center;
+}
+.header__centerContent {
+  border: 1px solid gray;
+  border-radius: 10px;
+
+  padding: 5px;
+  width: 50%;
+  display: flex;
+}
+.header__centerContent > .MuiSvgIcon-root {
+  margin-right: 20px;
+  margin-left: 10px;
+}
+.header__centerContent > input {
+  outline: none;
+  border-style: none;
+  width: 100%;
+}
+.header__right {
+  /* margin-top: 30px; */
+  flex: 0.2;
+  /* display: flex; */
+  /* align-items: center; */
+}
+input[type="file"] {
+  visibility: hidden;
+}
+
+.header__input {
+  display: grid;
+}
+.header__input > input {
+  margin-bottom: 10px;
+  border-radius: 10px;
+}
+.header__input > label {
+  margin-bottom: 5px;
+}
+
+.header__buttons > button {
+  margin-right: 10px;
+}
+
+@media screen and (max-width: 500px) {
+  .header {
+    padding: 0;
+    padding-top: 20px;
+    margin-bottom: 30px;
+  }
+  .header__left {
+    flex: 0.2;
+  }
+  .header__text > h3 {
+    font-size: medium;
+  }
+  .header__text > h6 {
+    font-size: small;
+  }
+  .header__left > .MuiSvgIcon-root {
+    font-size: 30px;
+    margin: 0;
+  }
+  .header__center {
+    flex: 0.4;
+    visibility: hidden;
+  }
+  .header__centerContent {
+    /* padding: 0; */
+    width: 100%;
+  }
+  .header__right {
+    flex: 0.4;
+  }
+  .header__buttons > button {
+    margin: 0;
+  }
+}
